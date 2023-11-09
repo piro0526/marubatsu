@@ -2,7 +2,7 @@
 #include "Board.h"
 namespace py = pybind11;
 
-PYBIND11_MODULE(tic-tac-toe, m)
+PYBIND11_MODULE(tic_tac_toe, m)
 {
     py::class_<Point>(m, "Point")
         .def(py::init<>())
@@ -13,11 +13,11 @@ PYBIND11_MODULE(tic-tac-toe, m)
         .def("setY", &Point::setX)
         ;
     
-    py::class_<Disc, Point>(m, "Point")
+    py::class_<Disc, Point>(m, "Disc")
         .def(py::init<>())
         .def(py::init<int, int, Mark>())
-        .def("getMark", &Point::getX)
-        .def("setMark", &Point::getX)
+        .def("getMark", &Disc::getX)
+        .def("setMark", &Disc::getX)
         ;
     
     m.attr('BOARD_ROW_SIZE') = BOARD_ROW_SIZE;
@@ -26,19 +26,19 @@ PYBIND11_MODULE(tic-tac-toe, m)
     m.attr('MAX_TURNS') = MAX_TURNS;
 
 
-    py::class_<Board>(m, "Point")
+    py::class_<Board>(m, "Board")
         .def(py::init<>())
-        .def("init", &Point::init)
-        .def("place", &Point::palce)
-        .def("undo", &Point::undo)
-        .def("checkLine", &Point::checkLine)
-        .def("isGameOver", &Point::isGameOver)
-        .def("switchMark", &Point::switchMark)
-        .def("countDisc", &Point::countDisc)
-        .def("getMark", &Point::getMark)
-        .def("getMovablePosition", &Point::getMovablePosition)
-        .def("getUpdate", &Point::getUpdate)
-        .def("getCurrentMark", &Point::getCurrentMark)
-        .def("getTurns", &Point::getTurns)
+        .def("init", &Board::init)
+        .def("place", &Board::palce)
+        .def("undo", &Board::undo)
+        .def("checkLine", &Board::checkLine)
+        .def("isGameOver", &Board::isGameOver)
+        .def("switchMark", &Board::switchMark)
+        .def("countDisc", &Board::countDisc)
+        .def("getMark", &Board::getMark)
+        .def("getMovablePosition", &Board::getMovablePosition)
+        .def("getUpdate", &Board::getUpdate)
+        .def("getCurrentMark", &Board::getCurrentMark)
+        .def("getTurns", &Board::getTurns)
         ;
 }

@@ -4,13 +4,13 @@ from pybind11.setup_helpers import Pybind11Extension, build_ext
 
 ext_modules = [
     Pybind11Extension(
-        "tic-tac-toe",
+        "tic_tac_toe",
         sorted(glob("src/*.cpp")),  # Sort source files for reproducibility
     ),
 ]
 
 setup(
-    name="tic-tac-toe",
+    name="tic_tac_toe",
     version=0.1,
     author='piro3112',
     description='A pybind11 example',
