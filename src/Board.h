@@ -7,6 +7,7 @@ static const int BOARD_ROW_SIZE = 3;
 static const int BOARD_COL_SIZE = 3;
 static const int K_IN_A_ROW = 3;
 static const int MAX_TURNS = BOARD_ROW_SIZE*BOARD_COL_SIZE;
+static const int TEST = 99;
 
 
 class Board
@@ -15,7 +16,7 @@ public:
     Board();
 
     void init();
-    bool place(const Point point);
+    bool place(const Point& point);
     bool undo();
     bool checkLine() const;
     bool isGameOver() const;

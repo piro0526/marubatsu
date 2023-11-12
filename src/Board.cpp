@@ -42,7 +42,7 @@ void Board::init()
     initMovable();
 }
 
-bool Board::place(const Point point)
+bool Board::place(const Point& point)
 {
     // ボード外に石は置けない. 
     if (point.getX() < 0 || point.getX() > BOARD_ROW_SIZE)

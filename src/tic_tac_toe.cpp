@@ -25,10 +25,10 @@ PYBIND11_MODULE(tic_tac_toe, m)
     m.attr("K_IN_A_ROW") = py::cast(K_IN_A_ROW);
     m.attr("MAX_TURNS") = py::cast(MAX_TURNS);
 
-    m.attr("EMPTY") = py::cast(0);
-    m.attr("X") = py::cast(-1);
-    m.attr("O") = py::cast(1);
-    m.attr("WALL") = py::cast(2);
+    m.attr("EMPTY") = 0;
+    m.attr("X") = -1;
+    m.attr("O") = 1;
+    m.attr("WALL") = 2;
 
 
 

@@ -6,7 +6,7 @@ from pathlib import Path
 from glob import glob
 
 
-__version__ = '0.1.0'
+__version__ = '0.1.1'
 
 
 class get_pybind_include(object):
