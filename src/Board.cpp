@@ -125,7 +125,7 @@ void Board::switchMark()
     initMovable();
 }
 
-Mark Board::getMark(const Point& point) const
+const Mark Board::getMark(const Point& point) const
 {
     return _rawBoard[point.getX()][point.getY()];
 }

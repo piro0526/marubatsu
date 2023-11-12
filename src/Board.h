@@ -21,7 +21,7 @@ public:
     bool isGameOver() const;
     void switchMark();
 
-    const Mark getMark(Point& point) const;
+    const Mark getMark(const Point& point) const;
     std::vector<Point> getPlaceablePosition() const;
     Disc getUpdate() const;
     Mark getCurrentMark() const;
