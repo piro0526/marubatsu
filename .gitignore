@@ -1,3 +1,7 @@
 pybind11/
 .vscode/
-.tic-tac-toe/
+.tic_tac_toe/
+build/
+tic_tac_toe.egg-info/
+get-pip.py
+tmp/

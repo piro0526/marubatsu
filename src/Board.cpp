@@ -42,7 +42,7 @@ void Board::init()
     initMovable();
 }
 
-bool Board::place(const Point& point)
+bool Board::place(const Point point)
 {
     // ボード外に石は置けない. 
     if (point.getX() < 0 || point.getX() > BOARD_ROW_SIZE)
@@ -130,7 +130,7 @@ Mark Board::getMark(const Point& point) const
     return _rawBoard[point.getX()][point.getY()];
 }
 
-const std::vector<Point>& Board::getMovablePosition() const
+std::vector<Point> Board::getPlaceablePosition() const
 {
     return _placeablePosition[_turns];
 }

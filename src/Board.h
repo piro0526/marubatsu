@@ -1,3 +1,4 @@
+#pragma once
 #include "Disc.h"
 #include <utility>
 #include <vector>
@@ -14,15 +15,14 @@ public:
     Board();
 
     void init();
-    bool place(const Point& point);
+    bool place(const Point point);
     bool undo();
     bool checkLine() const;
     bool isGameOver() const;
     void switchMark();
 
-    unsigned int countDisc(Mark mark) const;
-    Mark getMark(const Point& point) const;
-    const std::vector<Point>& getMovablePosition() const;
+    const Mark getMark(Point& point) const;
+    std::vector<Point> getPlaceablePosition() const;
     Disc getUpdate() const;
     Mark getCurrentMark() const;
     unsigned int getTurns() const;
