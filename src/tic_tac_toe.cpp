@@ -8,9 +8,9 @@ PYBIND11_MODULE(tic_tac_toe, m)
         .def(py::init<>())
         .def(py::init<int, int>())
         .def("getX", &Point::getX)
-        .def("getY", &Point::getX)
+        .def("getY", &Point::getY)
         .def("setX", &Point::setX)
-        .def("setY", &Point::setX)
+        .def("setY", &Point::setY)
         ;
     
     py::class_<Disc, Point>(m, "Disc")

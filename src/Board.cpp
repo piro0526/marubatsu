@@ -60,8 +60,10 @@ bool Board::place(const Point& point)
         return false;
     }
 
+
     _rawBoard[point.getX()][point.getY()] = _currentPlayerMark;
 
+    _updateLog.push_back(Disc(point.getX(), point.getY(), _currentPlayerMark));
 
     return true;
 }
